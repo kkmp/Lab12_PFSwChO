@@ -52,7 +52,7 @@ kubectl get secret dockerhub-cred --output="jsonpath={.data.\.dockerconfigjson}"
 Wynik działania polecenia:  
 ![5](img/5.png)
 
-Kolejnym krokiem było zdefiniowanie manifestu pod nazwą [test12-pod.yaml](link). Plik umożliwia utworzenie poda o nazwie *test12* w domyślnej przestrzeni nazw. Wskazałem nazwę utworzonego obrazu (*kkmp13/private-repo:lab12*), a następnie, zgodnie z dokumentacją, użyłem pola *imagePullSecrets* w sekcji specyfikacji. Pole to umożliwiło mi powiązanie  obiektu Secret o nazwie *dockerhub-cred* z tworzonym podem, w celu uwierzytelnienia przy pobieraniu wskazanego obrazu, pochodzącego z prywatnego repozytorium.
+Kolejnym krokiem było zdefiniowanie manifestu pod nazwą [test12-pod.yaml](https://github.com/kkmp/Lab12_PFSwChO/blob/main/test12-pod.yaml). Plik umożliwia utworzenie poda o nazwie *test12* w domyślnej przestrzeni nazw. Wskazałem nazwę utworzonego obrazu (*kkmp13/private-repo:lab12*), a następnie, zgodnie z dokumentacją, użyłem pola *imagePullSecrets* w sekcji specyfikacji. Pole to umożliwiło mi powiązanie  obiektu Secret o nazwie *dockerhub-cred* z tworzonym podem, w celu uwierzytelnienia przy pobieraniu wskazanego obrazu, pochodzącego z prywatnego repozytorium.
 
 
 ## Krok 4. 
